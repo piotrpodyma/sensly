@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:~/sensly;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE;AUTO_RECONNECT=TRUE;MODE=PostgreSQL;
+    username: sensly
+    password: tajneHaslo
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: H2
+    show-sql: true
+    properties:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8081
